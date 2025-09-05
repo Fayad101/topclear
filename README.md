@@ -1,62 +1,40 @@
-<div id="top"></div>
-<br />
-<div align="center"> 
-  <a href="https://salla.dev"> 
-    <img src="https://salla.dev/wp-content/uploads/2023/03/1-Light.png" alt="Logo"> 
-  </a>
-  <h1 align="center">Theme Raed</h1>
-  <p align="center">
-    Theme Raed is the starting point for developing Themes for Salla Stores. 
-    <br />
-    <a href="https://salla.dev/"><strong>Explore our blogs »</strong></a>
-    <br />
-    <a href="https://github.com/SallaApp/theme-raed/issues/new">Report Bug</a> · 
-    <a href="https://github.com/SallaApp/theme-raed/discussions/new">Request Feature</a> . <a href="https://t.me/salladev">&lt;/Salla Developers&gt;</a> . <a href="https://docs.salla.dev/?nav=01HNFTD5Y5ESFQS3P9MJ0721VM">Official Documentation</a> 
-  </p>
-</div>
 
+# TopClear Theme
 
-<!-- TABLE OF CONTENTS -->
-<details open>
-  <summary>Table of Contents</summary>
-<ol>
-<li><a  href="#overview">Overview</a></li>
-<li><a  href="#getting-started">Getting Started</a>
-<ul>
-<li><a  href="#prerequisite">Prerequisite</a></li>
-<li><a  href="#install">Installation</a></li>
-</ul>
-</li>
-<li>
-<a  href="#usage">Usage</a>
-<ul>
-<li><a  href="#directory-structure">Directory Structure</a></li>
-<li><a  href="#theme-preview">Theme Preview</a></li>
-</ul>
-</li>
-<li>
-<a  href="#main-features">Main Features</a>
-<ul>
-<li><a  href="#theme-features">Theme Features</a></li>
-<li><a  href="#theme-components">Theme Components</a></li>
-</ul>
-</li>
-<li><a  href="#support">Support</a></li>
-<li><a  href="#contributing">Contributing</a></li>
-<li><a  href="#credits">Credits</a></li>
-<li><a  href="#license">License</a></li>
-</ol>
-</details>
+TopClear is a modern, responsive, and highly customizable theme designed for Salla stores. Built with the latest web technologies, TopClear offers a clean and elegant user experience, making it ideal for merchants who want their online store to stand out.
 
-<br>
+## Features
 
-## Overview
-Theme Raed is the starting point for developers to design themes for merchant stores that reflect the uniqueness of each store on the [Salla Platform](https://s.salla.sa). Custom themes will make it much easier for developers to tailor the merchant's store to its changing demands over time. It shipped as the default theme along with the [Twilight Themes](https://docs.salla.dev/?nav=01HNFTD5Y5ESFQS3P9MJ0721VM), which is the Salla themes engine for developers to create customizable themes to be used on the [Salla Platform](https://salla.sa/site/).
-  
-## Getting Started 
-Developers can use Salla Theme Raed to not only design Salla themes with custom HTML/CSS/JS files and reusable custom UI components, but also to build custom actions that trigger JS events and hooks.
+- Sleek, modern design with a focus on usability and accessibility
+- Fully responsive layout for seamless shopping on any device
+- Modular component system for easy customization and scalability
+- Built with Twig, SCSS, and ES6 JavaScript for maintainability
+- Integrated with Salla's Twilight engine for advanced theme options
+- Ready-to-use components for home, product, cart, testimonials, and more
+- RTL and LTR support for multilingual stores
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+## Getting Started
+
+1. Clone or download this repository.
+2. Install dependencies with your preferred package manager (e.g., `pnpm install`).
+3. Use the provided build tools to compile assets and start development.
+4. Customize components and styles in the `src/` and `views/` directories.
+5. Follow Salla's documentation to package and publish your theme.
+
+## Directory Structure
+
+- `src/` — Source assets (styles, JS, images)
+- `views/` — Twig templates for layouts, pages, and components
+- `public/` — Compiled assets for production
+- `locales/` — Translation files
+
+## Author
+
+Fayad Adel
+
+---
+
+TopClear is the perfect starting point for building a beautiful, high-performance Salla store. Enjoy modern e-commerce development!
 
 ### Prerequisite  
 - Basic understanding of HTML, CSS, JS, and the [Twig Template Engine](https://twig.symfony.com/).

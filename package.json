@@ -1,5 +1,5 @@
 {
-  "name": "theme-raed",
+  "name": "topclear",
   "version": "1.0.3",
   "description": "Salla Theme",
   "license": "MIT",
@@ -15,7 +15,7 @@
     "development": "webpack --mode development",
     "watch": "webpack --mode development --watch"
   },
-  "author": "Salla",
+  "author": "Fayad Adel",
   "dependencies": {
     "@babel/runtime": "^7.26.10",
     "animejs": "^3.2.1",
