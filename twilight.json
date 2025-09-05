@@ -1023,6 +1023,13 @@
                     "maxLength": 30
                 }
             ]
+        },
+        {
+            "key": "9e13acd6-1c86-4d28-b86f-2639d6dc40ae",
+            "title": "سلايدر شكل 1",
+            "icon": "sicon-ellipsis-vertical-filled",
+            "path": "home.modern-slider",
+            "fields": []
         }
     ],
     "support_url": "https://example.com",
