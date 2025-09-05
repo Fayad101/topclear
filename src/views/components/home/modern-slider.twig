@@ -1,0 +1,71 @@
+{#
+  Enhanced Modern Slider Component for TopClear Theme
+  Inspired by: https://codepen.io/sohrabzia/pen/RNWpjrx
+#}
+<section class="modern-slider-section py-12 bg-gradient-to-br from-blue-50 to-indigo-100">
+  <div class="container mx-auto px-4">
+    <div class="relative overflow-hidden rounded-2xl shadow-xl group">
+      <div class="modern-slider flex transition-transform duration-700 ease-in-out" data-slider>
+        {% for slide in component.slides %}
+        <div class="modern-slide min-w-full flex-shrink-0 flex flex-col items-center justify-center p-12 bg-white/80">
+          <img src="{{ slide.image }}" alt="{{ slide.title }}" class="w-40 h-40 object-cover rounded-full shadow-lg mb-6 border-4 border-indigo-200">
+          <h3 class="text-2xl font-bold text-indigo-700 mb-2">{{ slide.title }}</h3>
+          <p class="text-gray-600 text-lg mb-4">{{ slide.description }}</p>
+          {% if slide.link %}
+          <a href="{{ slide.link }}" class="inline-block px-6 py-2 bg-indigo-600 text-white rounded-full shadow hover:bg-indigo-700 transition">Learn More</a>
+          {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+      <!-- Slider Controls -->
+      <button class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-indigo-100 text-indigo-700 rounded-full p-3 shadow transition" data-slider-prev>
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+      </button>
+      <button class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-indigo-100 text-indigo-700 rounded-full p-3 shadow transition" data-slider-next>
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+    <!-- Dots -->
+    <div class="flex justify-center mt-6 space-x-2" data-slider-dots>
+      {% for slide in component.slides %}
+      <button class="w-3 h-3 rounded-full bg-indigo-300 hover:bg-indigo-500 transition" data-slider-dot></button>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% block scripts %}
+<script>
+(function() {
+  const slider = document.querySelector('[data-slider]');
+  if (!slider) return;
+  const slides = slider.children;
+  const prevBtn = document.querySelector('[data-slider-prev]');
+  const nextBtn = document.querySelector('[data-slider-next]');
+  const dots = document.querySelectorAll('[data-slider-dot]');
+  let current = 0;
+  function updateSlider() {
+    slider.style.transform = `translateX(-${current * 100}%)`;
+    dots.forEach((dot, idx) => {
+      dot.classList.toggle('bg-indigo-700', idx === current);
+      dot.classList.toggle('bg-indigo-300', idx !== current);
+    });
+  }
+  prevBtn.addEventListener('click', () => {
+    current = (current - 1 + slides.length) % slides.length;
+    updateSlider();
+  });
+  nextBtn.addEventListener('click', () => {
+    current = (current + 1) % slides.length;
+    updateSlider();
+  });
+  dots.forEach((dot, idx) => {
+    dot.addEventListener('click', () => {
+      current = idx;
+      updateSlider();
+    });
+  });
+  updateSlider();
+})();
+</script>
+{% endblock %}
