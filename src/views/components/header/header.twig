@@ -47,37 +47,37 @@
 
   {# Main Nav #}
   <div id="mainnav" class="main-nav-container shadow-default bg-white">
-      <div class="inner bg-inherit">
-          <div class="container">
-              <div class="flex items-stretch justify-between relative">
-                  <div class="flex items-center">
-                      <a class="lg:hidden mburger mburger--collapse leading-none rtl:ml-4 ltr:mr-4" href="#mobile-menu" aria-label="Open-menu">
-                        <i class="sicon-menu text-primary text-2xl"></i>
-                      </a>
-                      <a class="navbar-brand" href="{{ store.url }}">
-                          <img fetchpriority="high" width="100%" height="100%" loading="eager" src="{{ store.logo }}" alt="{{ store.name }} logo">
-                          {% if is_page('index') %}
-                            <h1 class="sr-only">{{ store.name }}</h1>
-                          {% else %}
-                            <h2 class="sr-only">{{ store.name }}</h2>
-                          {% endif %}
-                      </a>
-                      <custom-main-menu></custom-main-menu>
-                  </div>
-                  <div class="flex items-center justify-end">
-                      {% if user.type=='user' %}
-                        <salla-user-menu avatar-only show-header></salla-user-menu>
-                      {% else %}
-                          <button class="header-btn" aria-label="user-icon" onclick="salla.event.dispatch('login::open')">
-                            <i class="header-btn__icon sicon-user-circle"></i>
-                          </button>
-                      {% endif %}
-                      <salla-cart-summary class="ml-4 rtl:ml-[unset] rtl:mr-4">
-                        <i slot="icon" class="header-btn__icon icon sicon-shopping-bag"></i>
-                      </salla-cart-summary>
-                  </div>
-              </div>
+      <div class="inner bg-inherit py-4">
+        <div class="container flex flex-col items-center justify-center gap-2">
+          <div class="flex items-center justify-center w-full relative">
+            <a class="lg:hidden mburger mburger--collapse leading-none absolute left-0 top-1/2 -translate-y-1/2 rtl:ml-4 ltr:mr-4" href="#mobile-menu" aria-label="Open-menu">
+              <i class="sicon-menu text-primary text-2xl"></i>
+            </a>
+            <a class="navbar-brand mx-auto" href="{{ store.url }}">
+              <img fetchpriority="high" width="100%" height="100%" loading="eager" src="{{ store.logo }}" alt="{{ store.name }} logo" class="modern-header-logo">
+              {% if is_page('index') %}
+                <h1 class="sr-only">{{ store.name }}</h1>
+              {% else %}
+                <h2 class="sr-only">{{ store.name }}</h2>
+              {% endif %}
+            </a>
+            <div class="flex items-center gap-2 absolute right-0 top-1/2 -translate-y-1/2">
+              {% if user.type=='user' %}
+                <salla-user-menu avatar-only show-header></salla-user-menu>
+              {% else %}
+                <button class="header-btn" aria-label="user-icon" onclick="salla.event.dispatch('login::open')">
+                  <i class="header-btn__icon sicon-user-circle"></i>
+                </button>
+              {% endif %}
+              <salla-cart-summary class="ml-2 rtl:ml-[unset] rtl:mr-2">
+                <i slot="icon" class="header-btn__icon icon sicon-shopping-bag"></i>
+              </salla-cart-summary>
+            </div>
           </div>
+          <nav class="modern-header-menu w-full flex justify-center mt-2">
+            <custom-main-menu></custom-main-menu>
+          </nav>
+        </div>
       </div>
   </div>
 </header>

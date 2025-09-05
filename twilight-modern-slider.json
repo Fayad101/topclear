@@ -1,0 +1,43 @@
+{
+  "components": {
+    "home.modern-slider": {
+      "label": "Modern Slider",
+      "description": "A modern, customizable slider for your homepage.",
+      "fields": [
+        {
+          "type": "repeater",
+          "key": "slides",
+          "label": "Slides",
+          "min": 1,
+          "max": 10,
+          "fields": [
+            {
+              "type": "image",
+              "key": "image",
+              "label": "Slide Image",
+              "required": true
+            },
+            {
+              "type": "text",
+              "key": "title",
+              "label": "Title",
+              "required": true
+            },
+            {
+              "type": "textarea",
+              "key": "description",
+              "label": "Description",
+              "required": false
+            },
+            {
+              "type": "url",
+              "key": "link",
+              "label": "Button Link",
+              "required": false
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

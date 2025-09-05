@@ -1021,7 +1021,56 @@
                     "required": false,
                     "minLength": 1,
                     "maxLength": 30
-                }
+                },
+            {
+                "key": "modern-slider-1",
+                                "title": "سلايدر عصري (Modern Slider)",
+                                "icon": "sicon-image-carousel",
+                                "path": "home.modern-slider",
+                                "image": "",
+                                "is_default": false,
+                                "fields": [
+                                    {
+                                        "type": "collection",
+                                        "id": "slides",
+                                        "format": "collection",
+                                        "label": "الشرائح",
+                                        "item_label": "شريحة",
+                                        "minLength": 1,
+                                        "maxLength": 10,
+                                        "fields": [
+                                            {
+                                                "type": "string",
+                                                "id": "slides.image",
+                                                "label": "صورة الشريحة",
+                                                "format": "image",
+                                                "required": true
+                                            },
+                                            {
+                                                "type": "string",
+                                                "id": "slides.title",
+                                                "label": "العنوان",
+                                                "format": "text",
+                                                "required": true
+                                            },
+                                            {
+                                                "type": "string",
+                                                "id": "slides.description",
+                                                "label": "الوصف",
+                                                "format": "textarea",
+                                                "required": false
+                                            },
+                                            {
+                                                "type": "string",
+                                                "id": "slides.link",
+                                                "label": "رابط الزر",
+                                                "format": "url",
+                                                "required": false
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
             ]
         }
     ],

@@ -75,6 +75,23 @@
   .has-text-color & {
     @apply text-[color:var(--mainnav-text-color)];
   }
+  // Modern Header Redesign
+  .modern-header-logo {
+    @apply rounded-full shadow-lg bg-white p-2 max-h-16 max-w-[120px] transition-all duration-300;
+  }
+
+  .modern-header-menu {
+    @apply flex flex-row gap-2 bg-gray-50 rounded-xl shadow px-4 py-2 w-full max-w-2xl;
+  }
+
+  .modern-header-menu custom-main-menu {
+    @apply w-full;
+  }
+
+  .modern-header-menu .menu-item {
+    @apply text-base font-medium px-4 py-2 rounded-lg hover:bg-gray-100 hover:text-primary transition-colors duration-200;
+  }
+  // ...existing code...
 }
 
 .menu-item {
